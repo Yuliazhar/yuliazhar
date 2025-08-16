@@ -1,907 +1,521 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Muhammad Arif & Yuli Azhar wedding</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-   
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="id">
 
-
-<!--simplycoutdown-->
-    <link rel="stylesheet" href="simplyCountdown.js-master/dist/themes/default.min.css">
-    <script src="simplyCountdown.js-master/dist/simplyCountdown.js"></script>
-    <link rel="stylesheet" href="simplyCountdown.js-master/dist/themes/circle.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan - Muhammad Arif & Yulia Azar</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-  </head>
-
-  <body>
-  
-
-
-<section id="hero" class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white section-bg-hero">
-    <!-- Floating Islamic Elements -->
-    <div class="floating-heart">☪</div>
-    <div class="floating-heart">🕌</div>
-    <div class="floating-heart">📿</div>
-    <div class="floating-heart">☪</div>
-    <div class="floating-heart">🕌</div>
-    <div class="floating-heart">📿</div>
-    <div class="floating-heart">☪</div>
-    <div class="floating-heart">🕌</div>
-    <div class="floating-heart">📿</div>
-    
-    <div class="hero-content-box">
-      <main>
-         <h3 class="wedding-subtitle">The Wedding Of</h3>
-         <H1 class="wedding-title">Muhammad Arif & Yulia Azhar</H1>
-         <h4 class="wedding-greeting">Assalāmu'alaikum warahmatullāhi wabarakātuh</h4>
-         <div class="quran-verse">
-           <p class="arabic-text">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا</p>
-           <p class="verse-translation">"Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan-pasangan dari jenismu sendiri"</p>
-           <p class="verse-reference">QS. Ar-Rum: 21</p>
-         </div>
-         <h2 class="wedding-invitation">Kepada <span>Bpk/Ibu/Saudara/i</span></h2>
-         <p class="wedding-description">Tanpa Mengurangi Rasa Hormat, Kami Mengundang Anda Untuk Berhadir Di Acara Pernikahan Kami</p>
-         <a href="#couple" class="btn btn-lg mt-4 wedding-btn">Lihat Undangan</a>
-      </main>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h2>Memuat Undangan...</h2>
+            <p>Mohon tunggu sebentar</p>
+        </div>
     </div>
-</section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>  
+    <!-- Floating Hearts -->
+    <div class="floating-hearts" id="hearts"></div>
 
-<nav class="navbar navbar-expand-md bg-transparent sticky-top mynavbar">
-  <div class="container">
-      <a class="navbar-brand" href="#">Arif Wedding</a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Arif Wedding</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+
+    <!-- Hero Section -->
+    <div class="hero" id="hero">
+        <div class="hero-content">
+            <h1 class="hero-greeting">The Wedding Of</h1>
+            <h2 class="hero-title">Muhammad Arif & Yuli Azhar</h2>
+            <h3 class="hero-subtitle">Assalāmu'alaikum warahmatullāhi wabarakātuh</h3>
+            <h4 class="hero-invitation">
+                Tanpa Mengurangi Rasa Hormat, Kami Bermaksud Untuk Mengundang
+                <br>
+                Bapak/Ibu, Saudara/i,
+                <br>
+                <strong>Xaverius</strong>
+                <br>
+                Untuk Hadir Pada Acara Pernikahan Kami
+            </h4>
+            <p class="hero-date">Selasa, 9 September 2025</p>
+            <button class="open-invitation sticky-button" onclick="openInvitation()">
+                <i class="fas fa-heart"></i> Buka Undangan
+            </button>
         </div>
-        <div class="offcanvas-body">
-            <div class="navbar-nav ms-auto">
-              <a class="nav-link" href="#hero">Home</a>
-              <a class="nav-link" href="#couple">Couple</a>
-              <a class="nav-link" href="#info">Info</a>
-              <a class="nav-link" href="#galery">Gallery</a>
-              <a class="nav-link" href="#wishes">Wishes</a>
-              <a class="nav-link" href="#gift">Gift</a>
-            </div>
-        </div>
-      </div>
     </div>
-  </nav>
-  
-  <section id="couple" class="couple section-bg-couple">
-    <!-- Floating Islamic Elements -->
-    <div class="floating-heart">☪</div>
-    <div class="floating-heart">🕌</div>
-    <div class="floating-heart">📿</div>
-    <div class="floating-heart">☪</div>
-    <div class="floating-heart">🕌</div>
-    
-    <div class="container py-5">
-      <div class="row justify-content-center mb-5">
-        <div class="col-md-8 text-center">
-          <div class="section-header-box">
-            <h2 class="section-title">Acara Pernikahan</h2>
-            <h3 class="section-subtitle">Diselenggarakan Pada 9 September 2025</h3>
-            <p class="section-description">di Tempat Kediaman Mempelai Wanita, Sei Apung Dusun III, Jl Ampera</p>
-            <div class="quran-verse">
-              <p class="arabic-text">فَإِنْ طَلَّقَهَا فَلَا تَحِلُّ لَهُ مِن بَعْدُ حَتَّىٰ تَنكِحَ زَوْجًا غَيْرَهُ</p>
-              <p class="verse-translation">"Maka jika dia menceraikannya, dia tidak halal baginya sampai dia menikah dengan suami yang lain"</p>
-              <p class="verse-reference">QS. Al-Baqarah: 230</p>
-            </div>
-            <p class="section-invitation">Oleh Karena Itu Dengan Segala Hormat, Kami Bermaksud Untuk Mengundang Bapak/Ibu, Saudara/i, Untuk Hadir Pada Acara Pernikahan Kami</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="row couple-profiles">
-        <div class="col-lg-6 mb-4">
-          <div class="couple-card">
-            <div class="row align-items-center">
-              <div class="col-md-4 text-center mb-3 mb-md-0">
-                <div class="couple-image-wrapper">
-                  <div class="islamic-symbol">☪</div>
-                  <div class="couple-name-display">Muhammad Arif</div>
-                </div>
-              </div>
-              <div class="col-md-8">
-                <div class="couple-info">
-                  <h3 class="couple-name">Muhammad Arif</h3>
-                  <p class="couple-description">Putra dari Bapak Hamlet & Ibu Yusni Siagian</p>
-                  <p class="couple-parents">Putra dari<br><strong>Bapak Hamlet</strong><br>dan<br><strong>Ibu Yusni Siagian</strong></p>
-                  <div class="quran-verse-small">
-                    <p class="arabic-text-small">يَا أَيُّهَا النَّاسُ إِنَّا خَلَقْنَاكُم مِّن ذَكَرٍ وَأُنثَىٰ</p>
-                    <p class="verse-translation-small">"Wahai manusia! Sesungguhnya Kami menciptakan kamu dari seorang laki-laki dan seorang perempuan"</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-lg-6 mb-4">
-          <div class="couple-card">
-            <div class="row align-items-center">
-              <div class="col-md-4 text-center mb-3 mb-md-0">
-                <div class="couple-image-wrapper">
-                  <div class="islamic-symbol">🕌</div>
-                  <div class="couple-name-display">Yulia Azhar</div>
-                </div>
-              </div>
-              <div class="col-md-8">
-                <div class="couple-info">
-                  <h3 class="couple-name">Yulia Azhar</h3>
-                  <p class="couple-description">Putri dari Bapak ALM Azhar Jamali & ibu Rina Wati</p>
-                  <p class="couple-parents">Putri dari<br><strong>Bapak Azhar</strong><br>dan<br><strong>Ibu Rina Wati</strong></p>
-                  <div class="quran-verse-small">
-                    <p class="arabic-text-small">وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً</p>
-                    <p class="verse-translation-small">"Dan Dia menjadikan di antara kamu rasa kasih dan sayang"</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section id="info" class="info section-bg-info">
-    <!-- Floating Islamic Elements -->
-    <div class="floating-heart">📿</div>
-    <div class="floating-heart">☪</div>
-    <div class="floating-heart">🕌</div>
-    <div class="floating-heart">📿</div>
-    
-    <div class="container py-5">
-      <div class="row justify-content-center">
-        <div class="col-md-8 text-center">
-          <div class="section-header-box">
-            <h2 class="section-title">Informasi Acara</h2>
-            <p class="section-greeting">Assalāmu'alaikum warahmatullāhi wabarakātuh.</p>
-            <div class="quran-verse">
-              <p class="arabic-text">وَأَنكِحُوا الْأَيَامَىٰ مِنكُمْ وَالصَّالِحِينَ مِنْ عِبَادِكُمْ وَإِمَائِكُمْ</p>
-              <p class="verse-translation">"Dan nikahkanlah orang-orang yang masih membujang di antara kamu, dan juga orang-orang yang layak dari hamba-hamba sahayamu yang laki-laki dan perempuan"</p>
-              <p class="verse-reference">QS. An-Nur: 32</p>
-            </div>
-            <p class="section-description">Tanpa mengurangi rasa hormat, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan doa restu pada acara pernikahan kami:</p>
-          </div>
-          
-          <div class="event-detail-box">
-            <h4 class="event-title">Akad Nikah</h4>
-            <div class="event-info">
-              <p class="event-date"><strong>Senin, 08 September 2025</strong></p>
-              <p class="event-time">Pukul 20.00 WIB s.d Selesai</p>
-             <br>
-        
-              <h4 class="event-title">Resepsi Nikah</h4>
-              <div class="event-info">
-                <p class="event-date"><strong>Selasa, 09 September 2025</strong></p>
-                <p class="event-time">Pukul 10.00 WIB s.d Selesai</p>
-                <p class="event-location">Kediaman Mempelai Wanita<br>Sei Apung Dusun III, Jl Ampera</p>
-              </div>
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <!-- Couple Section -->
+        <section class="section couple-section">
+            <h2 class="section-title fade-in">Arif & Yuli</h2>
+            <p class="section-subtitle fade-in">Mari berkenalan dengan kedua mempelai yang akan memulai perjalanan hidup
+                baru</p>
 
-            <div class="countdown-container">
-              <div class="my-super-countdown simply-countdown-circle"></div>
-            </div>
+            <div class="couple-container">
+                <div class="couple-card fade-in">
+                    <div class="couple-photo1">
+                        <img src="img/couple.png" alt="Foto Arif"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                    </div>
+                    <h3 class="couple-name">Arif</h3>
+                    <p class="couple-desc">Muhammad Arif</p>
+                    <p class="couple-desc">Putra dari Keluarga<br>Putra dari Bapak Hamlet & Ibu Yusni Siagian</p>
+                    <br>
+                    <h3 class="couple-name">Yuli</h3>
+                    <p class="couple-desc">Yuli Azhar</p>
+                    <p class="couple-desc">Putri dari Keluarga<br>Putri dari Bapak ALM Azhar Jamali & Ibu Rina Wati</p>
+                </div>
+
             
-            <div class="location-button-container">
-              <a class="btn btn-success btn-lg location-btn" href="https://maps.app.goo.gl/Ur9EFJkQNqCrsxqC9" target="_blank" rel="nofollow noopener">
-                <i class="bi bi-geo-alt-fill me-2"></i>
-                Kunjungi Lokasi
-              </a>
-            </div>
-          </div>
-          
-          <div class="closing-message">
-            <div class="quran-verse">
-              <p class="arabic-text">رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ</p>
-              <p class="verse-translation">"Ya Tuhan kami, anugerahkanlah kepada kami pasangan kami dan keturunan kami sebagai penyenang hati"</p>
-              <p class="verse-reference">QS. Al-Furqan: 74</p>
-            </div>
-            <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami sekeluarga apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kedua mempelai. Atas kehadiran serta doa restu, kami ucapkan terima kasih.</p>
-            <p class="closing-greeting">Wassalāmu'alaikum warahmatullāhi wabarakātuh.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-<section id="galery" class="galery section-bg-gallery">
-  <!-- Floating Islamic Elements -->
-  <div class="floating-heart">🕌</div>
-  <div class="floating-heart">☪</div>
-  <div class="floating-heart">📿</div>
-  <div class="floating-heart">🕌</div>
-  
-  <div class="container py-5">
-    <div class="row justify-content-center mb-5">
-      <div class="col-md-8 text-center">
-        <div class="section-header-box">
-          <h2 class="section-title">Galeri Doa & Harapan</h2>
-          <p class="section-description">Ayat-ayat Al-Quran dan doa untuk pernikahan</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="row g-4 justify-content-center">
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="gallery-item">
-          <div class="gallery-box">
-            <div class="islamic-content">
-              <div class="arabic-text-gallery">بَارَكَ اللَّهُ لَكَ وَبَارَكَ عَلَيْكَ</div>
-              <div class="translation-gallery">"Semoga Allah memberkahimu dan memberkahi pernikahanmu"</div>
-            </div>
-            <div class="gallery-overlay">
-              <i class="bi bi-heart-fill"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="gallery-item">
-          <div class="gallery-box">
-            <div class="islamic-content">
-              <div class="arabic-text-gallery">جَمَعَ اللَّهُ بَيْنَكُمَا فِي خَيْرٍ</div>
-              <div class="translation-gallery">"Semoga Allah mengumpulkan kalian berdua dalam kebaikan"</div>
-            </div>
-            <div class="gallery-overlay">
-              <i class="bi bi-heart-fill"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="gallery-item">
-          <div class="gallery-box">
-            <div class="islamic-content">
-              <div class="arabic-text-gallery">اللَّهُمَّ بَارِكْ لِي فِيمَا رَزَقْتَنِي</div>
-              <div class="translation-gallery">"Ya Allah, berkahilah untukku pada apa yang telah Engkau rezekikan kepadaku"</div>
-            </div>
-            <div class="gallery-overlay">
-              <i class="bi bi-heart-fill"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="gallery-item">
-          <div class="gallery-box">
-            <div class="islamic-content">
-              <div class="arabic-text-gallery">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا</div>
-              <div class="translation-gallery">"Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan-pasangan"</div>
-            </div>
-            <div class="gallery-overlay">
-              <i class="bi bi-heart-fill"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="gallery-item">
-          <div class="gallery-box">
-            <div class="islamic-content">
-              <div class="arabic-text-gallery">وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً</div>
-              <div class="translation-gallery">"Dan Dia menjadikan di antara kamu rasa kasih dan sayang"</div>
-            </div>
-            <div class="gallery-overlay">
-              <i class="bi bi-heart-fill"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="gallery-item">
-          <div class="gallery-box">
-            <div class="islamic-content">
-              <div class="arabic-text-gallery">رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ</div>
-              <div class="translation-gallery">"Ya Tuhan kami, anugerahkanlah kepada kami pasangan kami dan keturunan kami"</div>
-            </div>
-            <div class="gallery-overlay">
-              <i class="bi bi-heart-fill"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="text-center mt-4">
-    
-    </div>
-  </div>
-</section>
+        </section>
 
-<section id="wishes" class="wishes section-bg-wishes">
-  <!-- Floating Islamic Elements -->
-  <div class="floating-heart">📿</div>
-  <div class="floating-heart">☪</div>
-  <div class="floating-heart">🕌</div>
-  <div class="floating-heart">📿</div>
-  
-  <div class="container py-5">
-    <div class="row justify-content-center mb-5">
-      <div class="col-md-8 text-center">
-        <div class="section-header-box">
-          <h2 class="section-title">Ucapan & Doa</h2>
-          <p class="section-description">Berikan ucapan dan doa restu untuk kami</p>
-          <div class="quran-verse">
-            <p class="arabic-text">وَقُل رَّبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا</p>
-            <p class="verse-translation">"Dan katakanlah: 'Ya Tuhanku, kasihilah mereka keduanya, sebagaimana mereka berdua telah mendidik aku waktu kecil'"</p>
-            <p class="verse-reference">QS. Al-Isra: 24</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="wishes-container">
-          <div id="disqus_thread"></div>
-          <script>
-            /**
-            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-            /*
-            var disqus_config = function () {
-            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            };
-            */
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://the-wedding-of-muhammad-arif.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-            })();
-          </script>
-          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+        <!-- Countdown Section -->
+        <section class="section countdown-section">
+            <h2 class="section-title fade-in" style="color: white;">Menghitung Hari</h2>
+            <p class="section-subtitle fade-in" style="color: rgba(255,255,255,0.9);">Menuju hari bahagia kami <br> 09
+                September 2025</p>
 
-<section id="gift" class="gift section-bg-gift">
-  <!-- Floating Islamic Elements -->
-  <div class="floating-heart">☪</div>
-  <div class="floating-heart">🕌</div>
-  <div class="floating-heart">📿</div>
-  <div class="floating-heart">☪</div>
-  
-  <div class="container py-5">
-    <div class="row justify-content-center mb-5">
-      <div class="col-md-8 text-center">
-        <div class="section-header-box">
-          <h2 class="section-title">Kirim Hadiah</h2>
-          <p class="section-description">Doa restu adalah hadiah terindah, namun jika ingin memberikan hadiah lainnya, berikut rekening kami</p>
-          <div class="quran-verse">
-            <p class="arabic-text">إِنَّ اللَّهَ يَأْمُرُ بِالْعَدْلِ وَالْإِحْسَانِ</p>
-            <p class="verse-translation">"Sesungguhnya Allah menyuruh (kamu) berlaku adil dan berbuat kebajikan"</p>
-            <p class="verse-reference">QS. An-Nahl: 90</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="row justify-content-center">
-      <div class="col-md-8 col-lg-6">
-        <div class="gift-container">
-          <div class="row g-4">
-            <div class="col-md-6">
-              <div class="bank-card">
-                <div class="bank-header">
-                  <i class="bi bi-bank2"></i>
-                  <h4>Bank BRI</h4>
+            <div class="countdown-container" id="countdown">
+                <div class="countdown-item fade-in">
+                    <span class="countdown-number" id="days">31</span>
+                    <span class="countdown-label">Hari</span>
                 </div>
-                <div class="bank-info">
-                  <p class="account-name">A.N Yulia Azhar</p>
-                  <p class="account-number">353601024592358</p>
-                  <button class="btn btn-outline-primary btn-sm copy-btn" onclick="copyToClipboard('353601024592358')">
-                    <i class="bi bi-clipboard"></i> Salin Nomor
-                  </button>
+                <div class="countdown-item fade-in">
+                    <span class="countdown-number" id="hours">10</span>
+                    <span class="countdown-label">Jam</span>
                 </div>
-              </div>
+                <div class="countdown-item fade-in">
+                    <span class="countdown-number" id="minutes">30</span>
+                    <span class="countdown-label">Menit</span>
+                </div>
+                <div class="countdown-item fade-in">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Detik</span>
+                </div>
             </div>
-            <div class="col-md-6">
-              <div class="bank-card">
-                <div class="bank-header">
-                  <i class="bi bi-bank2"></i>
-                  <h4>Bank BCA</h4>
+        </section>
+
+        <!-- Event Section -->
+        <section class="section event-section">
+            <h2 class="section-title fade-in">Acara</h2>
+            <p class="section-subtitle fade-in">Jadwal acara pernikahan kami yang penuh makna</p>
+
+            <div class="event-grid">
+                <div class="event-card fade-in">
+                    <div class="event-icon">
+                        <i class="fas fa-mosque"></i>
+                    </div>
+                    <h3 class="event-title">Akad Nikah</h3>
+                    <div class="event-details">
+                        <p><strong>Senin, 08 September 2025</strong></p>
+                        <p>Pukul 10.00 WIB s.d Selesai</p>
+                        <p>Sei Apung Dusun III, Jl Ampera</p>
+                        <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.8;">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <a href="#" onclick="openLocation()"
+                                style="color: var(--primary-color); text-decoration: none;">
+                                Lihat Lokasi
+                            </a>
+                        </p>
+                    </div>
                 </div>
-                <div class="bank-info">
-                  <p class="account-name">A.N Muhammad Ayif</p>
-                  <p class="account-number">1234567890</p>
-                  <button class="btn btn-outline-primary btn-sm copy-btn" onclick="copyToClipboard('1234567890')">
-                    <i class="bi bi-clipboard"></i> Salin Nomor
-                  </button>
+
+                <div class="event-card fade-in">
+                    <div class="event-icon">
+                        <i class="fas fa-glass-cheers"></i>
+                    </div>
+                    <h3 class="event-title">Resepsi Nikah</h3>
+                    <div class="event-details">
+                        <p><strong>Selasa, 09 September 2025</strong></p>
+                        <p>Pukul 12.00 WIB s.d Selesai</p>
+                        <p>Sei Apung Dusun III, Jl Ampera</p>
+                        <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.8;">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <a href="#" onclick="openLocation()"
+                                style="color: var(--primary-color); text-decoration: none;">
+                                Lihat Lokasi
+                            </a>
+                        </p>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
+        </section>
+
+        <!-- Gift Section -->
+        <section class="section gift-section">
+            <h2 class="section-title fade-in">Amplop Digital</h2>
+            <p class="section-subtitle fade-in">Kehadiran Anda merupakan doa, namun jika memberi adalah bentuk cinta
+                kasih</p>
+
+            <div class="gift-container">
+                <div class="gift-card fade-in">
+                    <div class="bank-logo">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3 class="bank-name">BRI</h3>
+                    <div class="account-number" onclick="copyToClipboard('353601024592358')">
+                        353601024592358
+                    </div>
+                    <p class="account-holder">a.n Yulia Azhar</p>
+                </div>
+
+                <div class="gift-card fade-in">
+                    <div class="bank-logo">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="bank-name">DANA</h3>
+                    <div class="account-number" onclick="copyToClipboard('085265347217')">
+                        083871718610
+                    </div>
+                    <p class="account-holder">a.n Yulia Azhar </p>
+                </div>
+        </section>
+
+        <!-- Wishes Section -->
+        <section class="section wishes-section">
+            <h2 class="section-title fade-in">Ucapan & Doa</h2>
+            <p class="section-subtitle fade-in">Tinggalkan doa terbaik Anda untuk momen bahagia kami</p>
+
+            <div>
+                <div id="disqus_thread"></div>
+                <script>
+                    /**
+                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                    /*
+                    var disqus_config = function () {
+                    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    */
+                    (function () { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://the-wedding-of-muhammad-arif.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments
+                        powered by Disqus.</a></noscript>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <h3>Arif & Yuli</h3>
+            <p>Selasa, 09 September 2025</p>
+            <p style="margin-top: 20px;">Terima kasih atas kehadiran dan doa restu Anda</p>
+            <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.6;">
+                Dibuat dengan ❤️ untuk momen spesial kami
+            </p>
+        </footer>
     </div>
-  </div>
-</section>
 
-<div id="audio-container">
-<audio id="song" autoplay loop muted preload="auto">
-  <source src="audio/Wedding Nasheed.mp3" type="audio/mp3">
-  Your browser does not support the audio element.
-</audio>
-<div class="audio-icon-wrapper" onclick="toggleAudio()" style="cursor: pointer;">
-  <i class="bi bi-disc" id="audio-icon"></i>
-</div>
-</div>
-
-<script>
-// Copy to clipboard functionality
-function copyToClipboard(text) {
-  navigator.clipboard.writeText(text).then(function() {
-    // Show success message
-    const button = event.target.closest('.copy-btn');
-    const originalText = button.innerHTML;
-    button.innerHTML = '<i class="bi bi-check"></i> Tersalin!';
-    button.classList.remove('btn-outline-primary');
-    button.classList.add('btn-success');
-    
-    setTimeout(() => {
-      button.innerHTML = originalText;
-      button.classList.remove('btn-success');
-      button.classList.add('btn-outline-primary');
-    }, 2000);
-  }).catch(function(err) {
-    console.error('Could not copy text: ', err);
-    alert('Gagal menyalin nomor rekening');
-  });
-}
-
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  });
-});
-
-// Gallery item click functionality for Islamic content
-document.querySelectorAll('.gallery-item').forEach(item => {
-  item.addEventListener('click', function() {
-    const islamicContent = this.querySelector('.islamic-content');
-    if (islamicContent) {
-      // Create modal for Islamic content preview
-      const modal = document.createElement('div');
-      modal.className = 'image-modal';
-      modal.innerHTML = `
-        <div class="modal-content">
-          <span class="close-modal">&times;</span>
-          <div class="modal-islamic-content">
-            ${islamicContent.innerHTML}
-          </div>
+    <div id="audio-container">
+        <audio id="song" preload="auto">
+          <source src="audio/Wedding Nasheed.mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+        </audio>
+        <div class="audio-icon-wrapper" onclick="toggleAudio()" style="cursor: pointer;" title="Klik untuk memulai musik">
+          <i class="bi bi-play-circle" id="audio-icon"></i>
         </div>
-      `;
-      
-      document.body.appendChild(modal);
-      
-      // Close modal functionality
-      modal.querySelector('.close-modal').onclick = function() {
-        document.body.removeChild(modal);
-      };
-      
-      modal.onclick = function(e) {
-        if (e.target === modal) {
-          document.body.removeChild(modal);
+       
+    <script>
+        // Loading Screen
+        window.addEventListener('load', function () {
+            setTimeout(() => {
+                document.getElementById('loadingScreen').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('loadingScreen').style.display = 'none';
+                }, 500);
+            }, 2000);
+        });
+
+        // Countdown Timer with better logic
+        function updateCountdown() {
+            const weddingDate = new Date('September 09, 2025 10:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            if (distance < 0) {
+                // Wedding day has passed
+                document.getElementById('days').textContent = '00';
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Add leading zeros and smooth transitions
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+
+            // Add pulse effect when seconds change
+            if (seconds === 0) {
+                document.querySelectorAll('.countdown-item').forEach(item => {
+                    item.style.transform = 'scale(1.1)';
+                    setTimeout(() => {
+                        item.style.transform = 'scale(1)';
+                    }, 200);
+                });
+            }
         }
-      };
-    }
-  });
-});
 
-// Navbar background change on scroll
-window.addEventListener('scroll', function() {
-  const navbar = document.querySelector('.mynavbar');
-  if (window.scrollY > 50) {
-    navbar.classList.add('navbar-scrolled');
-  } else {
-    navbar.classList.remove('navbar-scrolled');
-  }
-});
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
 
-// Scroll-triggered animations
-function animateOnScroll() {
-  const elements = document.querySelectorAll('.scroll-animate');
-  elements.forEach(element => {
-    const elementTop = element.getBoundingClientRect().top;
-    const elementVisible = 150;
-    
-    if (elementTop < window.innerHeight - elementVisible) {
-      element.classList.add('animate');
-    }
-  });
-}
+        // Open Invitation with enhanced animation
+        function openInvitation() {
+            const hero = document.getElementById('hero');
+            const mainContent = document.getElementById('mainContent');
 
-// Add scroll animation class to elements
-function addScrollAnimationClass() {
-  const sections = document.querySelectorAll('section');
-  sections.forEach(section => {
-    const elements = section.querySelectorAll('.section-header-box, .couple-card, .event-detail-box, .gallery-item, .bank-card, .wishes-container, .gift-container');
-    elements.forEach(element => {
-      element.classList.add('scroll-animate');
-    });
-  });
-}
+            // Fade out hero
+            hero.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            hero.style.opacity = '0';
+            hero.style.transform = 'scale(0.9)';
 
-// Parallax effect for floating Islamic elements
-function parallaxHearts() {
-  const hearts = document.querySelectorAll('.floating-heart');
-  const scrolled = window.pageYOffset;
-  
-  hearts.forEach((heart, index) => {
-    const speed = 0.5 + (index * 0.1);
-    const yPos = -(scrolled * speed);
-    heart.style.transform = `translateY(${yPos}px) rotate(${scrolled * 0.1}deg)`;
-  });
-}
+            setTimeout(() => {
+                hero.style.display = 'none';
+                mainContent.style.display = 'block';
 
-// Add shimmer effect to buttons on hover
-function addShimmerEffect() {
-  const buttons = document.querySelectorAll('.wedding-btn, .location-btn, .copy-btn');
-  buttons.forEach(button => {
-    button.addEventListener('mouseenter', function() {
-      this.classList.add('shimmer');
-    });
-    
-    button.addEventListener('mouseleave', function() {
-      this.classList.remove('shimmer');
-    });
-  });
-}
-
-// Add pulse animation to important elements
-function addPulseAnimation() {
-  const pulseElements = document.querySelectorAll('.section-title, .wedding-title');
-  pulseElements.forEach(element => {
-    element.addEventListener('mouseenter', function() {
-      this.style.animation = 'pulse 0.6s ease-in-out';
-    });
-    
-    element.addEventListener('animationend', function() {
-      this.style.animation = '';
-    });
-  });
-}
-
-// Add bounce animation to Islamic symbols
-function addBounceAnimation() {
-  const images = document.querySelectorAll('.islamic-symbol, .arabic-text');
-  images.forEach(image => {
-    image.addEventListener('mouseenter', function() {
-      this.style.animation = 'bounce 1s ease-in-out';
-    });
-    
-    image.addEventListener('animationend', function() {
-      this.style.animation = '';
-    });
-  });
-}
-
-// Add typing effect to titles
-function addTypingEffect() {
-  const titles = document.querySelectorAll('.section-title');
-  titles.forEach(title => {
-    const text = title.textContent;
-    title.textContent = '';
-    title.style.borderRight = '2px solid #c71585';
-    
-    let i = 0;
-    const typeWriter = () => {
-      if (i < text.length) {
-        title.textContent += text.charAt(i);
-        i++;
-        setTimeout(typeWriter, 100);
-      } else {
-        title.style.borderRight = 'none';
-      }
-    };
-    
-    // Start typing effect when element is visible
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          typeWriter();
-          observer.unobserve(entry.target);
+                // Trigger scroll animations
+                setTimeout(() => {
+                    triggerScrollAnimations();
+                }, 100);
+            }, 800);
         }
-      });
-    });
-    
-    observer.observe(title);
-  });
-}
 
-// Add confetti effect on button clicks
-function addConfettiEffect() {
-  const buttons = document.querySelectorAll('.wedding-btn, .location-btn');
-  buttons.forEach(button => {
-    button.addEventListener('click', function() {
-      createConfetti();
-    });
-  });
-}
+        // Enhanced Copy to Clipboard
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                // Show success notification
+                showNotification('Nomor rekening berhasil disalin!', 'success');
+            }).catch(err => {
+                console.error('Gagal menyalin: ', err);
+                showNotification('Gagal menyalin nomor rekening', 'error');
+            });
+        }
 
-function createConfetti() {
-  const colors = ['#c71585', '#db7093', '#ff69b4', '#ff1493', '#ffb6c1'];
-  const confettiCount = 50;
-  
-  for (let i = 0; i < confettiCount; i++) {
-    const confetti = document.createElement('div');
-    confetti.style.position = 'fixed';
-    confetti.style.left = Math.random() * 100 + 'vw';
-    confetti.style.top = '-10px';
-    confetti.style.width = '10px';
-    confetti.style.height = '10px';
-    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-    confetti.style.borderRadius = '50%';
-    confetti.style.pointerEvents = 'none';
-    confetti.style.zIndex = '9999';
-    confetti.style.animation = `fall ${Math.random() * 3 + 2}s linear forwards`;
-    
-    document.body.appendChild(confetti);
-    
-    setTimeout(() => {
-      document.body.removeChild(confetti);
-    }, 5000);
-  }
-}
+        // Notification System
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                padding: 15px 25px;
+                border-radius: 10px;
+                color: white;
+                font-weight: 600;
+                z-index: 10000;
+                transform: translateX(100%);
+                transition: transform 0.3s ease;
+                background: ${type === 'success' ? 'linear-gradient(135deg, #10B981, #059669)' : 'linear-gradient(135deg, #EF4444, #DC2626)'};
+                box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            `;
+            notification.textContent = message;
 
-// Add CSS for confetti animation
-const confettiStyle = document.createElement('style');
-confettiStyle.textContent = `
-  @keyframes fall {
-    to {
-      transform: translateY(100vh) rotate(360deg);
-      opacity: 0;
-    }
-  }
-`;
-document.head.appendChild(confettiStyle);
+            document.body.appendChild(notification);
 
-// Add floating animation to cards
-function addFloatingAnimation() {
-  const cards = document.querySelectorAll('.couple-card, .bank-card, .event-detail-box');
-  cards.forEach((card, index) => {
-    card.style.animation = `floating ${3 + index * 0.5}s ease-in-out infinite`;
-  });
-}
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 100);
 
-// Add CSS for floating animation
-const floatingStyle = document.createElement('style');
-floatingStyle.textContent = `
-  @keyframes floating {
-    0%, 100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-`;
-document.head.appendChild(floatingStyle);
+            setTimeout(() => {
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 3000);
+        }
 
-// Add glow effect to important elements
-function addGlowEffect() {
-  const glowElements = document.querySelectorAll('.wedding-title, .section-title');
-  glowElements.forEach(element => {
-    element.addEventListener('mouseenter', function() {
-      this.style.textShadow = '0 0 20px rgba(199, 21, 133, 0.8)';
-    });
-    
-    element.addEventListener('mouseleave', function() {
-      this.style.textShadow = '';
-    });
-  });
-}
+        // Enhanced Floating Hearts Animation
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '❤';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 4 + 4 + 's';
+            heart.style.fontSize = Math.random() * 25 + 15 + 'px';
+            heart.style.opacity = Math.random() * 0.5 + 0.3;
 
-// Add ripple effect to buttons
-function addRippleEffect() {
-  const buttons = document.querySelectorAll('button, .btn');
-  buttons.forEach(button => {
-    button.addEventListener('click', function(e) {
-      const ripple = document.createElement('span');
-      const rect = this.getBoundingClientRect();
-      const size = Math.max(rect.width, rect.height);
-      const x = e.clientX - rect.left - size / 2;
-      const y = e.clientY - rect.top - size / 2;
-      
-      ripple.style.width = ripple.style.height = size + 'px';
-      ripple.style.left = x + 'px';
-      ripple.style.top = y + 'px';
-      ripple.classList.add('ripple');
-      
-      this.appendChild(ripple);
-      
-      setTimeout(() => {
-        ripple.remove();
-      }, 600);
-    });
-  });
-}
+            document.getElementById('hearts').appendChild(heart);
 
-// Add CSS for ripple effect
-const rippleStyle = document.createElement('style');
-rippleStyle.textContent = `
-  .ripple {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.6);
-    transform: scale(0);
-    animation: ripple-animation 0.6s linear;
-    pointer-events: none;
-  }
-  
-  @keyframes ripple-animation {
-    to {
-      transform: scale(4);
-      opacity: 0;
-    }
-  }
-`;
-document.head.appendChild(rippleStyle);
+            setTimeout(() => {
+                if (heart.parentNode) {
+                    heart.remove();
+                }
+            }, 8000);
+        }
 
-// Early audio initialization
-window.addEventListener('load', function() {
-    const audio = document.getElementById('song');
-    if (audio) {
-        // Try to play immediately when page loads
-        audio.play().catch(e => console.log('Load event autoplay failed:', e));
+        setInterval(createHeart, 400);
+
+        // Scroll Animation System
+        function triggerScrollAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+
+
+        // Location Handler
+        function openLocation() {
+            // In a real implementation, this would open Google Maps
+            const address = 'JL. Kayu Putih gg. Parijah';
+            const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+            window.open(url, '_blank');
+        }
+
+
+        // Initialize everything when page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            // Add some interactive elements
+            document.querySelectorAll('.couple-card').forEach(card => {
+                card.addEventListener('mouseenter', function () {
+                    this.style.transform = 'translateY(-15px) scale(1.02)';
+                });
+
+                card.addEventListener('mouseleave', function () {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Add keyboard navigation
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' && document.getElementById('hero').style.display !== 'none') {
+                    openInvitation();
+                }
+            });
+        });
+
+        // Performance optimization: Throttle scroll events
+        let ticking = false;
+        function updateOnScroll() {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    // Any scroll-based animations can go here
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', updateOnScroll);
+
         
-        // Try again after a short delay
-        setTimeout(() => {
-            audio.play().catch(e => console.log('Load delayed autoplay failed:', e));
-        }, 500);
-    }
-});
+    </script>
 
-// Try to play audio as soon as possible
-document.addEventListener('readystatechange', function() {
-    if (document.readyState === 'interactive') {
-        const audio = document.getElementById('song');
-        if (audio) {
-            audio.play().catch(e => console.log('ReadyState autoplay failed:', e));
+    <script>
+        // Audio Control Script
+        let isPlaying = false;
+        const song = document.getElementById('song');
+        const audioIcon = document.getElementById('audio-icon');
+        const audioContainer = document.getElementById('audio-container');
+
+        function toggleAudio() {
+            if (isPlaying) {
+                song.pause();
+                audioIcon.className = 'fas fa-play-circle';
+                isPlaying = false;
+            } else {
+                song.play().catch(error => {
+                    console.log('Auto-play prevented:', error);
+                });
+                audioIcon.className = 'fas fa-pause-circle';
+                isPlaying = true;
+            }
         }
-    }
-});
 
-// Audio toggle functionality
-let audio = document.getElementById('song');
-let audioIcon = document.getElementById('audio-icon');
-
-function toggleAudio() {
-    if (audio.paused || audio.muted) {
-        audio.muted = false;
-        audio.play();
-        audioIcon.className = 'bi bi-disc';
-        audioIcon.parentElement.classList.remove('paused');
-        audioIcon.parentElement.classList.add('playing');
-    } else {
-        audio.pause();
-        audioIcon.className = 'bi bi-pause-circle';
-        audioIcon.parentElement.classList.remove('playing');
-        audioIcon.parentElement.classList.add('paused');
-    }
-}
-
-// Handle autoplay restrictions
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize all animations
-    addScrollAnimationClass();
-    addShimmerEffect();
-    addPulseAnimation();
-    addBounceAnimation();
-    addTypingEffect();
-    addConfettiEffect();
-    addFloatingAnimation();
-    addGlowEffect();
-    addRippleEffect();
-    
-    // Add event listeners
-    window.addEventListener('scroll', animateOnScroll);
-    window.addEventListener('scroll', parallaxHearts);
-    
-    // Initial call
-    animateOnScroll();
-    
-    // Try to play audio immediately
-    audio.play().catch(e => console.log('Initial autoplay failed:', e));
-    
-    // Function to enable audio
-    function enableAudio() {
-        audio.muted = false;
-        if (audio.paused) {
-            audio.play().catch(e => console.log('Audio play failed:', e));
+        // Enhanced auto-play with multiple attempts
+        function attemptAutoPlay() {
+            song.play().then(() => {
+                audioIcon.className = 'fas fa-pause-circle';
+                isPlaying = true;
+                console.log('Audio auto-play successful');
+            }).catch(error => {
+                console.log('Auto-play prevented:', error);
+                // Show tooltip to encourage user interaction
+                const tooltip = document.querySelector('.audio-tooltip');
+                if (tooltip) {
+                    tooltip.style.display = 'block';
+                    setTimeout(() => {
+                        tooltip.style.display = 'none';
+                    }, 3000);
+                }
+            });
         }
-    }
-    
-    // Try multiple times to start audio
-    setTimeout(() => {
-        audio.play().catch(e => console.log('Delayed autoplay failed:', e));
-    }, 1000);
-    
-    setTimeout(() => {
-        audio.play().catch(e => console.log('Second delayed autoplay failed:', e));
-    }, 2000);
-    
-    // Try to play audio on any user interaction
-    document.addEventListener('click', enableAudio);
-    document.addEventListener('scroll', enableAudio);
-    document.addEventListener('mousemove', enableAudio);
-    document.addEventListener('touchstart', enableAudio);
-    document.addEventListener('keydown', enableAudio);
-    
-    // Try to play on window focus
-    window.addEventListener('focus', function() {
-        audio.play().catch(e => console.log('Focus autoplay failed:', e));
-    });
-    
-    // Try to play on page visibility change
-    document.addEventListener('visibilitychange', function() {
-        if (!document.hidden) {
-            audio.play().catch(e => console.log('Visibility autoplay failed:', e));
-        }
-    });
-});
 
-// Countdown initialization
-simplyCountdown(".my-super-countdown", {
-    year: 2025, // Target year (required)
-    month: 9, // Target month [1-12] (required)
-    day: 9, // Target day [1-31] (required)
-    hours: 8, // Target hour [0-23], default: 0
-    minutes: 0, // Target minute [0-59], default: 0
-    seconds: 0, // Target second [0-59], default: 0
-    words: { // Custom labels, with lambda for plurals
-        days: { root: 'Hari', lambda: (root, n) => root },
-        hours: { root: 'Jam', lambda: (root, n) => root },
-        minutes: { root: 'Menit', lambda: (root, n) => root },
-        seconds: { root: 'Detik', lambda: (root, n) => root }
-    }
-});
+        // Auto-play music when page loads with multiple strategies
+        window.addEventListener('load', function() {
+            // Strategy 1: Try immediate play
+            setTimeout(attemptAutoPlay, 500);
+            
+            // Strategy 2: Try again after loading screen
+            setTimeout(attemptAutoPlay, 2500);
+            
+            // Strategy 3: Try on first user interaction
+            document.addEventListener('click', function firstClick() {
+                if (!isPlaying) {
+                    attemptAutoPlay();
+                }
+                document.removeEventListener('click', firstClick);
+            }, { once: true });
+            
+            // Strategy 4: Try on scroll
+            document.addEventListener('scroll', function firstScroll() {
+                if (!isPlaying) {
+                    attemptAutoPlay();
+                }
+                document.removeEventListener('scroll', firstScroll);
+            }, { once: true });
+        });
 
-// URL parameter handling
-const urlParams = new URLSearchParams(window.location.search);
-const nama = urlParams.get('n') || '';
-const pronoun = urlParams.get('h2') || 'Bapak/Ibu/Saudara/I';
+        // Handle visibility change (when user switches tabs)
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden && isPlaying) {
+                song.pause();
+            } else if (!document.hidden && isPlaying) {
+                song.play().catch(() => {});
+            }
+        });
 
-console.log('Nama:', nama);
-console.log('Pronoun:', pronoun);
-
-if (nama && pronoun) {
-  const namaContainer = document.querySelector('.hero h2 span');
-  if (namaContainer) {
-    namaContainer.textContent = `${pronoun} ${nama},`.replace(/ ,S/,',');
-  }
-}
-</script>
-
+        // Handle user gesture requirement for mobile
+        document.addEventListener('touchstart', function firstTouch() {
+            if (!isPlaying) {
+                attemptAutoPlay();
+            }
+            document.removeEventListener('touchstart', firstTouch);
+        }, { once: true });
+    </script>
+    
 </body>
+
 </html>
