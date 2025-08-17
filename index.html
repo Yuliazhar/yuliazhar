@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 
@@ -27,24 +26,14 @@
     <!-- Floating Hearts -->
     <div class="floating-hearts" id="hearts"></div>
 
-
-
     <!-- Hero Section -->
     <div class="hero" id="hero">
         <div class="hero-content">
-            <h1 class="hero-greeting">The Wedding Of</h1>
-            <h2 class="hero-title">Muhammad Arif & Yuli Azhar</h2>
-            <h3 class="hero-subtitle">Assalāmu'alaikum warahmatullāhi wabarakātuh</h3>
-            <h4 class="hero-invitation">
-                Tanpa Mengurangi Rasa Hormat, Kami Bermaksud Untuk Mengundang
-                <br>
-                Bapak/Ibu, Saudara/i,
-                <br>
-                <strong>Xaverius</strong>
-                <br>
-                Untuk Hadir Pada Acara Pernikahan Kami
-            </h4>
-            <p class="hero-date">Selasa, 9 September 2025</p>
+            <h3 class="wedding-subtitle">The Wedding Of</h3>
+            <H1 class="wedding-title">Muhammad Arif & Yulia Azhar</H1>
+            <h4 class="wedding-greeting">Assalāmu'alaikum warahmatullāhi wabarakātuh</h4>
+            <h2 class="wedding-invitation">Kepada <span>Bpk/Ibu/Saudara/i</span></h2>
+            <p class="wedding-description">Tanpa Mengurangi Rasa Hormat, Kami Mengundang Anda Untuk Berhadir Di Acara Pernikahan Kami</p>
             <button class="open-invitation sticky-button" onclick="openInvitation()">
                 <i class="fas fa-heart"></i> Buka Undangan
             </button>
@@ -73,9 +62,7 @@
                     <p class="couple-desc">Yuli Azhar</p>
                     <p class="couple-desc">Putri dari Keluarga<br>Putri dari Bapak ALM Azhar Jamali & Ibu Rina Wati</p>
                 </div>
-
-            
-
+            </div>
         </section>
 
         <!-- Countdown Section -->
@@ -178,6 +165,7 @@
                     </div>
                     <p class="account-holder">a.n Yulia Azhar </p>
                 </div>
+            </div>
         </section>
 
         <!-- Wishes Section -->
@@ -191,6 +179,11 @@
                     /**
                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
                     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                    /*
+                    var disqus_config = function () {
+                    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
                     /*
                     var disqus_config = function () {
                     this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
@@ -389,8 +382,8 @@
         // Location Handler
         function openLocation() {
             // In a real implementation, this would open Google Maps
-            const address = 'JL. Kayu Putih gg. Parijah';
-            const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+            const address = 'Sei Apung Dusun III';
+            const url ="https://maps.app.goo.gl/Ur9EFJkQNqCrsxqC9";
             window.open(url, '_blank');
         }
 
@@ -514,6 +507,22 @@
             }
             document.removeEventListener('touchstart', firstTouch);
         }, { once: true });
+
+    // URL parameter handling - Fixed and consolidated
+    const urlParams = new URLSearchParams(window.location.search);
+    const nama = urlParams.get('n') || '';
+    const pronoun = urlParams.get('p') || 'Bapak/Ibu/Saudara/i';
+
+    console.log('Nama:', nama);
+    console.log('Pronoun:', pronoun);
+
+    if (nama && pronoun) {
+        const namaContainer = document.querySelector('.hero h2.wedding-invitation span');
+        if (namaContainer) {
+            const displayText = `${pronoun} ${nama}`;
+            namaContainer.textContent = displayText;
+        }
+    }
     </script>
     
 </body>
